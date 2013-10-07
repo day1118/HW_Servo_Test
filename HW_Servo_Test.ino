@@ -31,7 +31,7 @@ void setup() {
 void loop() {
 	// Read each sensor in a loop
   
-  PLOT(servoState, "servoState");
+  PLOT("servoState", servoState);
 
    switch(servoState)
    {
@@ -71,9 +71,9 @@ void loop() {
     servoB.write(servoBPos);
     servoK.write(servoKPos);
 
-   PLOT(servoFPos, "servoFPos");
-   PLOT(servoBPos, "servoBPos");
-   PLOT(servoKPos, "servoKPos");
+   PLOT("servoFPos", servoFPos);
+   PLOT("servoBPos", servoBPos);
+   PLOT("servoKPos", servoKPos);
 
    servoState++;
    if(servoState > 5)
